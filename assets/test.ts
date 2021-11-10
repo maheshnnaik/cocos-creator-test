@@ -18,26 +18,26 @@ export default class NewClass extends cc.Component {
     @property(cc.Node)
     button: cc.Node = null;
     onLoad() {
-        const standardRatio = cc.view.getDesignResolutionSize().width / cc.view.getDesignResolutionSize().height; // standard aspect ratio, the aspect ratio is almost iPhone6 (landscape), generally as a standard design draft   const screenSize = cc.view .getFrameSize(); 
-        const currentRatio = window.innerWidth / window.innerHeight; // aspect ratio 
-        console.log(cc.view.getCanvasSize());
+        // const standardRatio = cc.view.getDesignResolutionSize().width / cc.view.getDesignResolutionSize().height; // standard aspect ratio, the aspect ratio is almost iPhone6 (landscape), generally as a standard design draft   const screenSize = cc.view .getFrameSize(); 
+        // const currentRatio = window.innerWidth / window.innerHeight; // aspect ratio 
+        // console.log(cc.view.getCanvasSize());
         // a square screen, which means iPad or the like. 
-        if (currentRatio <= standardRatio) {
+        // if (currentRatio <= standardRatio) {
             // cc.Canvas.instance.fitHeight = false;
             // cc.Canvas.instance.fitWidth = true;
             // this.node.y = (window.innerHeight - (this.node.height / 2)) - this.button.getComponent(cc.Widget).top;
             
-            this.button.getComponent(cc.Widget).top = this.getTopValue();
-            console.log(this.button.getComponent(cc.Widget).top, this.button.y);
-        } else {
+        //     this.button.getComponent(cc.Widget).top = this.getTopValue();
+        //     console.log(this.button.getComponent(cc.Widget).top, this.button.y);
+        // } else {
             // Longer screen means ipx. Too long, the height appears small, so the priority is to fit the height
             // cc.Canvas.instance.fitWidth = false;
             // cc.Canvas.instance.fitHeight = true;
             // this.node.x = (window.innerWidth - (this.node.width / 2)) - this.button.getComponent(cc.Widget).right;
-            this.button.getComponent(cc.Widget).right = this.getRightValue();
-            console.log(this.button.getComponent(cc.Widget).right, this.button.x);
-        }
-        console.log("fit-height: ", cc.Canvas.instance.fitHeight, "fit-width: ", cc.Canvas.instance.fitWidth);
+        //     this.button.getComponent(cc.Widget).right = this.getRightValue();
+        //     console.log(this.button.getComponent(cc.Widget).right, this.button.x);
+        // }
+        // console.log("fit-height: ", cc.Canvas.instance.fitHeight, "fit-width: ", cc.Canvas.instance.fitWidth);
     
     }
 
